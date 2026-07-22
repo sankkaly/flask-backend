@@ -18,7 +18,6 @@ def connect_db(db_client:str):
 
 
 db = connect_db(client)
-db.close()
 database = db.get_database('sample_mflix')
 movies = database.get_collection("movies")
 movie =  movies.find_one({"title":"Back to the Future"})
